@@ -1,7 +1,11 @@
 https://wkhtmltopdf.org/downloads.html
 http://www.jianshu.com/p/4d65857ffe5e
 http://blog.163.com/songchao01230@126/blog/static/1161848722014222231114/
+js实现web打印方案：phantomjs+pdf.js
 
+
+https://github.com/GoogleChrome/puppeteer
+https://github.com/marcbachmann/node-html-pdf
 
 wkhtmltopdf -B 0mm -L 0mm -R 0mm -T 0mm  C:\Users\zhaos\Desktop\word\pages.html 5.pdf
  
