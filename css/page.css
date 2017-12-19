@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.pages-box {
+
+}
+
+.page-box {
+    width: 21cm;
+    border: 1px solid #cdcdcd;
+    padding: 2cm;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1cm auto;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+
+.page-box .page-header {
+    position: absolute;
+    top:1cm;
+    width: 21cm;
+    padding: 0.5cm 2cm 0 2cm;
+}
