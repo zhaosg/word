@@ -9,7 +9,7 @@ $(function () {
             //Add link with attrbute media=print
             mediaPrint: false,
             //Custom stylesheet
-            // stylesheet : "http://fonts.googleapis.com/css?family=Inconsolata",
+            stylesheet : "css/print.css",
             //Print in a hidden iframe
             iframe: true,
             //Don't print this
@@ -36,10 +36,6 @@ $(function () {
     }
 
     function paging() {
-        // root.append('<div id="ruler" style="width: 25.7cm;position: absolute"></div>');
-        root.append('<div id="v-ruler" class="v-ruler"></div>');
-        // root.append('<div id="ruler-inner" class="ruler-inner"></div>');
-        console.log($('#ruler').width());
         var mockPage = $('.page-box', root);
         var children = mockPage.children();
         for (var i = 0; i < children.length; i++) {

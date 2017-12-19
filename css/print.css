@@ -1,0 +1,84 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.pages-box {
+    width: 21cm;
+    margin: auto;
+    background: #e0e0e0;
+}
+
+.page-box {
+    width: 21cm;
+    /*height: 29.7cm;*/
+    height: 59.7cm;
+    border-width: 0px;
+    display: block;
+    padding: 0 2cm;
+    background: #ffffff;
+}
+
+.page-box .page-header {
+    width: 17cm;
+    height: 2cm;
+    display: block;
+    padding: 0.2cm;
+    text-align: center;
+}
+
+.page-box .page-footer {
+    width: 17cm;
+    height: 2cm;
+    display: block;
+    padding: 0.2cm;
+    text-align: center;
+}
+
+.page-box input.line {
+    border-width: 0px;
+    border-bottom: 1px solid #000;
+}
+
+.page-box input.line:focus {
+    outline: none;
+}
+
+.page-contents {
+    width: 17cm;
+    height: 25.7cm;
+    position: absolute;
+    border-width: 0px;
+    display: block;
+}
+
+.ruler-inner, .ruler-outter {
+    display: none;
+}
+/*隐藏不打印的元素*/
+.no-print {
+    display: none;
+}
+
+/*其他打印样式*/
+@page {
+    size: A4 portrait;
+    margin: 0px;
+}
+
+@page :left {
+    margin-left: 3cm;
+}
+
+@page :right {
+    margin: 3cm;
+}
