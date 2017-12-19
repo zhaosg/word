@@ -1,0 +1,43 @@
+ <!doctype html>
+<html>
+
+	<head>
+		<title>print demo</title>
+		<meta charset="utf-8" >
+		<style media="print">
+			.noprint {
+				display: none;
+			}
+		</style>
+		<script language="JavaScript">
+			function doPrintSetup() {
+				//打印设置  
+				printWB.ExecWB(8, 1)
+			}
+
+			function doPrintPreview() {
+				//打印预览  
+				printWB.ExecWB(7, 1)
+			}
+
+			function doPrint() {
+				//直接打印  
+				printWB.ExecWB(6, 6)
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="noprint">
+			<object id="printWB" style="dispaly:none" classid="clsid:8856F961-340A-11D0-A96B-00C04FD705A2" height="0"></object>
+			<input type="button" value="打印设置" onclick="doPrintSetup();"></input>
+			<input type="button" value="打印预览" onclick="doPrintPreview();"></input>
+			<input type="button" value="直接打印" onclick="doPrint();"></input>
+			<input type="button" value="关闭窗口" onclick="printWB.ExecWB(45,1);"></input>
+		</div>
+		<p>这些文本将要被打印!</p>
+		<p>关于这个组件还有其他的用法，列举如下：<br/> WebBrowser.ExecWB(1,1) 打开<br/> Web.ExecWB(2,1) 关闭现在所有的IE窗口，并打开一个新窗口<br/> Web.ExecWB(4,1) 保存网页<br/> Web.ExecWB(6,1) 打印<br/> Web.ExecWB(7,1) 打印预览<br/> Web.ExecWB(8,1) 打印页面设置<br/> Web.ExecWB(10,1) 查看页面属性<br/> Web.ExecWB(15,1) 撤销<br/> Web.ExecWB(17,1) 全选<br/> Web.ExecWB(22,1) 刷新<br/> Web.ExecWB(45,1) 关闭窗体无提示<br/>
+		</p>
+	</body>
+
+</html>

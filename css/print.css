@@ -72,13 +72,13 @@ html, body {
 /*其他打印样式*/
 @page {
     size: A4 portrait;
-    margin: 0px;
+    margin: 0;
 }
 
-@page :left {
-    margin-left: 3cm;
-}
+/*@page :left {*/
+    /*margin-left: 3cm;*/
+/*}*/
 
-@page :right {
-    margin: 3cm;
-}
+/*@page :right {*/
+    /*margin: 3cm;*/
+/*}*/
