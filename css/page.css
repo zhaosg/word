@@ -1,28 +1,101 @@
-html, body {
-    margin: 0;
-    padding: 0;
+@media screen {
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .pages-box {
+        width: 21cm;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .page-box {
+        width: 21cm;
+        height: 29.7cm;
+        border-width: 0px;
+        padding: 2cm;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    }
+
+    .page-box .page-header {
+        position: absolute;
+        top: 1cm;
+        width: 17cm;
+        padding: 0.5cm 0cm 0 0cm;
+    }
+
+    .page-box input.line {
+        border-width: 0px;
+        border-bottom: 1px solid #000;
+    }
+
+    .page-box input.line:focus {
+        outline: none;
+    }
+
+    .page-contents {
+        width: 17cm;
+        height: 25.7cm;
+        position: absolute;
+        border-width: 0px;
+        display: block;
+    }
+
+    .ruler-inner {
+        width: 17cm;
+        height: 25.7cm;
+        position: absolute;
+        top: 2cm;
+        border: 1px dotted #f00;
+    }
+
+    .ruler-outter {
+        width: 21cm;
+        height: 29.7cm;
+        position: absolute;
+        margin-top: -2cm;
+        margin-left: -2cm;
+        border: 1px dotted #f00;
+    }
 }
 
-.pages-box {
+@media print {
 
-}
+    /*隐藏不打印的元素*/
+    .no-print {
+        display: none;
+    }
 
-.page-box {
-    width: 21cm;
-    border: 1px solid #cdcdcd;
-    padding: 2cm;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 1cm auto;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
-}
+    /*其他打印样式*/
+    @page {
+        size: A4 portrait;
+        margin: 0px;
+    }
 
-.page-box .page-header {
-    position: absolute;
-    top:1cm;
-    width: 21cm;
-    padding: 0.5cm 2cm 0 2cm;
+    @page :left {
+        margin-left: 3cm;
+    }
+
+    @page :right {
+        margin: 3cm;
+    }
 }
