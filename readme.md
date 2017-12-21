@@ -3,7 +3,7 @@ http://www.jianshu.com/p/4d65857ffe5e
 http://blog.163.com/songchao01230@126/blog/static/1161848722014222231114/
 js实现web打印方案：phantomjs+pdf.js
 
-
+http://phantomjs.org/api/webpage/property/paper-size.html
 https://github.com/GoogleChrome/puppeteer
 https://github.com/marcbachmann/node-html-pdf
 
