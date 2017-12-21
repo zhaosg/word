@@ -1,1 +1,1 @@
-"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf" --header-center huihih -B 0mm -L 0mm -R 0mm -T 0mm  C:\Users\zhaos\Desktop\word\pages.html 5.pdf
+"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf" --header-center huihih -B 0mm -L 0mm -R 0mm -T 0mm --zoom "1.25" C:\Users\zhaos\Desktop\word\pages.html 5.pdf
