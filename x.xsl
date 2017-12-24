@@ -17,12 +17,12 @@
                     font-size: 20px;
                     font-family: arial;
                     }
-                    div {border-bottom: 1px dashed rgb(200,200,200);}
+                    <!--div {border-bottom: 1px dashed rgb(200,200,200);}-->
                     span {float: right;}
                     li {list-style: none;}
                     ul {
-                    font-size: 20px;
-                    font-family: arial;
+                    font-size: 18px;
+                    font-family: "\5b8b\4f53", Helvetica, Tahoma, arial, sans-serif;;
                     }
                     ul ul {font-size: 80%; }
                     ul {padding-left: 0em;}
@@ -49,6 +49,7 @@
                         </xsl:if>
                         <xsl:value-of select="@title" />
                     </a>
+                    <div></div>
                     <span> <xsl:value-of select="@page" /> </span>
                 </div>
             </xsl:if>

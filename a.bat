@@ -1,2 +1,2 @@
-"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"  --footer-right "Page [page] of [toPage]" -B 20mm -L 20mm -R 20mm -T 20mm --zoom "2"  toc --xsl-style-sheet x.xsl --toc-header-text "目录" --disable-dotted-lines C:\Users\zhaos\Desktop\word\pages1.html 5.pdf
-"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"  --footer-right "Page [page] of [toPage]" -B 20mm -L 20mm -R 20mm -T 20mm --zoom "2"  toc  --toc-header-text "目录" --disable-dotted-lines C:\Users\zhaos\Desktop\word\pages1.html 1.pdf
+"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"  --footer-right "Page [page] of [toPage]" -B 20mm -L 20mm -R 20mm -T 20mm --zoom "2"  toc --xsl-style-sheet x.xsl  C:\Users\zhaos\Desktop\word\pages1.html 5.pdf
+rem "C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"  --footer-right "Page [page] of [toPage]" -B 20mm -L 20mm -R 20mm -T 20mm --zoom "2"  toc  --toc-header-text "目录" --disable-dotted-lines C:\Users\zhaos\Desktop\word\pages1.html 1.pdf
