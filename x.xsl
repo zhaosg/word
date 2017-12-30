@@ -17,8 +17,7 @@
                     font-size: 20px;
                     font-family: arial;
                     }
-                    <!--div {border-bottom: 1px dashed rgb(200,200,200);}-->
-                    span {float: right;}
+                    span {right:0;position: absolute; display:block;font-size:12px;padding-left:5px;}
                     li {list-style: none;}
                     ul {
                     font-size: 18px;
@@ -27,7 +26,25 @@
                     ul ul {font-size: 80%; }
                     ul {padding-left: 0em;}
                     ul ul {padding-left: 1em;}
-                    a {text-decoration:none; color: black;}
+                    a {
+                       text-decoration:none;
+                       color: black;
+                       position: absolute;
+                       background: #fff;
+                       display:block;
+                       font-size:12px;
+                    padding-right:5px;
+                    }
+                    hr{
+                       position: absolute;left:10px;right:10px;top:0;
+                    font-size:12px;
+                       height:1px;border:none;border-top:1px dotted #000;
+                    }
+                    div{
+                       position: relative;
+                    width:100%;
+                    height:30px;
+                    }
                 </style>
             </head>
             <body>
@@ -40,6 +57,7 @@
         <li>
             <xsl:if test="@title!=''">
                 <div>
+                    <hr></hr>
                     <a>
                         <xsl:if test="@link">
                             <xsl:attribute name="href"><xsl:value-of select="@link"/></xsl:attribute>
@@ -49,7 +67,6 @@
                         </xsl:if>
                         <xsl:value-of select="@title" />
                     </a>
-                    <div></div>
                     <span> <xsl:value-of select="@page" /> </span>
                 </div>
             </xsl:if>
