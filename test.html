@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width: 604px;">
+    <div id="content1" style="width: 300px;height: 400px;border: 1px dotted #f00;float: left;display: block">
+    </div>
+    <div id="content" style="width: 300px;height:auto;border: 1px dotted #f00;float: right;display: block">
+    </div>
+</div>
+
+<button id="btn">upload</button>
+<button id="btn2">计算</button>
+<button id="btn3">计算1</button>
+<button id="btn4">计算2</button>
+<script type="text/javascript" charset="utf-8" src="js/jquery-1.7.2.min.js"></script>
+<script>
+    $(function () {
+        $('#btn').click(function () {
+            $('body').append('<form> <input id="file" name="sads" type="file" style="display: none;"></form>');
+            $('#file').click();
+        });
+        var text="原审被告人张文中(原物美控股集团有限公司董事长)诈骗、单位行贿、挪用资金一案，河北省高级人民法院于2009年3月30日作出终审判决，认定被告人张文中犯诈骗罪，判处有期徒刑十年，并处罚金人民币五十万元，犯单位行贿罪，判处有期徒刑三年，犯挪用资金罪，判处有期徒刑一年，决定执行有期徒刑十二年，并处罚金人民币五十万元;认定被告人张伟春犯诈骗罪，判处有期徒刑五年，并处罚金人民币二十万元;认定被告单位物美控股集团有限公司犯单位行贿罪，判处罚金人民币五百三十万元。原判生效后，原审被告人张文中向河北省高级人民法院提出申诉。河北省高级人民法院于2015年12月21日以(2015)冀刑监字第156号驳回申诉通知书，驳回其申诉。2016年10月，原审被告人张文中向最高人民法院提出申诉。最高人民法院经审查认为，原审被告人张文中提出的申诉符合《中华人民共和国刑事诉讼法》第二百四十二条第(二)、(三)项规定的重新审判条件，依照《中华人民共和国刑事诉讼法》第二百四十三条第二款的规定，决定提审本案。";
+        $('#btn2').click(function () {
+            var font= $('#content').css('font');
+            var w=0;
+            var ht=[];
+            var mw=$('#content').width();
+            console.log('mw',mw);
+            for(var i=0;i<text.length;i++){
+                var char=text.charAt(i);
+                var tw=getTextWidth(char,font);
+                w+=tw;
+                if(w>mw){
+                    ht.push(text.substr(i-1,1));
+                    w=0;
+                    i--;
+                }
+            }
+            $('#content').html(ht.join('<br/>'));
+        });
+        $('#btn4').click(function () {
+            var font= $('#content').css('font');
+            var lh= $('#content').css('line-height');
+            var w=0;
+            var ht=[];
+            var mw=$('#content').width();
+            console.log('mw',mw);
+            for(var i=0;i<text.length;i++){
+                $('#content').text(text.substring(0,i+1));
+                var h=$('#content').height();
+            }
+            $('#content').html(ht.join('<br/>'));
+        });
+        $('#btn3').click(function () {
+            $('#content1').text(text);
+        });
+
+        function getTextWidth(text, font) {
+            var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+            var context = canvas.getContext("2d");
+            context.font = font;
+            var metrics = context.measureText(text);
+            return metrics.width;
+        }
+
+        function getTextWidthDOM(text, font) {
+            var f = font || '12px arial',
+                o = $('<span>' + text + '</span>')
+                    .css({'font': f, 'float': 'left', 'white-space': 'nowrap'})
+                    //.css({'visibility': 'hidden'})
+                    .appendTo($('body')),
+                w = o.width();
+
+            //o.remove();
+
+            return w;
+        }
+    });
+</script>
+</body>
+</html>

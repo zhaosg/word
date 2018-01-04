@@ -1,0 +1,1 @@
+"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf"  --footer-right "[page] of [toPage]" -B 20mm -L 20mm -R 20mm -T 20mm --zoom "2"  toc --xsl-style-sheet x.xsl  http://127.0.0.1/word/pages4.html 5.pdf

@@ -28661,8 +28661,11 @@ UE.ui = baidu.editor.ui = {};
                     editor.ui._dialogs.linkDialog.open();
                 },
                 _onImgEditButtonClick:function (name) {
-                    this.hide();
-                    editor.ui._dialogs[name] && editor.ui._dialogs[name].open();
+                    $('body').append('<form> <input id="file" name="sads" type="file" data-clipboard-text="file:///C:/Users/alan/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png" style="display: none;"></form>');
+                    new Clipboard('#file');
+                    $('#file').click();
+                    // this.hide();
+                    // editor.ui._dialogs[name] && editor.ui._dialogs[name].open();
 
                 },
                 _onImgSetFloat:function (value) {
@@ -28762,7 +28765,7 @@ UE.ui = baidu.editor.ui = {};
                         if (img.getAttribute("word_img")) {
                             //todo 放到dialog去做查询
                             editor.word_img = [img.getAttribute("word_img")];
-                            dialogName = "wordimageDialog"
+                            dialogName = "wordimageDialog";
                         }
                         if(domUtils.hasClass(img, 'loadingclass') || domUtils.hasClass(img, 'loaderrorclass')) {
                             dialogName = "";
