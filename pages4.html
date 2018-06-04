@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页研究</title>
+    <!--<link href="css/screen.css" rel="stylesheet" type="text/css"/>-->
+    <style>
+        @media all {
+            * {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            html, body {
+                margin: 0;
+                padding: 0;
+
+            }
+
+            .pages-box {
+                width: 17cm;
+                margin: auto;
+                background: #e0e0e0;
+            }
+
+            .page-box {
+                width: 17cm;
+                /*height: 29.7cm;*/
+                height: 59.7cm;
+                border-width: 0px;
+                display: block;
+                padding: 0 0cm;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+            }
+
+            .page-box .page-header {
+                display: none;
+                width: 17cm;
+                height: 2cm;
+                padding: 0;
+                text-align: center;
+            }
+
+            .page-box .page-footer {
+                display: none;
+                width: 17cm;
+                height: 2cm;
+                display: block;
+                padding: 0.2cm;
+                text-align: center;
+            }
+
+            .page-box input.line {
+                border-width: 0px;
+                border-bottom: 1px solid #000;
+            }
+
+            .page-box input.line:focus {
+                outline: none;
+            }
+
+            .page-contents {
+                width: 17cm;
+                height: 25.7cm;
+                position: absolute;
+                border-width: 0px;
+                display: block;
+                font-size: 14px;
+                font: 14px "\5b8b\4f53", Helvetica, Tahoma, arial, sans-serif;
+            }
+
+            .page-contents p {
+                padding: 5px 0;
+                line-height: 30px;
+            }
+
+            /*.ruler-inner {*/
+                /*width: 17cm;*/
+                /*height: 25.7cm;*/
+                /*position: absolute;*/
+                /*top: 2cm;*/
+                /*border: 1px dotted #00f;*/
+            /*}*/
+
+            /*.ruler-outter {*/
+                /*width: 21cm;*/
+                /*height: 29.7cm;*/
+                /*position: absolute;*/
+                /*margin-top: -2cm;*/
+                /*margin-left: -2cm;*/
+                /*border: 1px dotted #00f;*/
+            /*}*/
+
+            .selectTdClass{background-color:#edf5fa !important}table.noBorderTable td,table.noBorderTable th,table.noBorderTable caption{border:1px dashed #ddd !important}table{margin-bottom:10px;border-collapse:collapse;display:table;}td,th{padding: 5px 10px;border: 1px solid #DDD;}caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}th{border-top:1px solid #BBB;background-color:#F7F7F7;}table tr.firstRow th{border-top-width:2px;}.ue-table-interlace-color-single{ background-color: #fcfcfc; } .ue-table-interlace-color-double{ background-color: #f7faff; }td p{margin:0;padding:0;}
+        }
+
+    </style>
+</head>
+<body>
+<div id="root" class="pages-box">
+    <div class="page-box">
+        <div class="ruler-inner"></div>
+        <div class="ruler-outter"></div>
+        <div class="page-contents">
+            <div class="new-con f14" id="fontzoom">
+                <h1>　　合作协议书范本</h1>
+                <p>　　甲方：_____________</p>
+                <p>　　乙方：_____________</p>
+                <p>　　甲、乙双方本着自愿、平等、公平、诚实、信用的原则，经友好协商，根据中华人民共和国有关<a title="法律" href="http://www.chinalawedu.com"
+                                                                  target="_blank" class="bule">法律</a>、<a title="法规"
+                                                                                                         href="http://www.chinalawedu.com/falvfagui/"
+                                                                                                         target="_blank"
+                                                                                                         class="bule">法规</a>的规定签定本协议，由双方共同遵守。
+                </p>
+                <p>　　第一条协议范围内，双方的关系确定为合作关系。为拓展市场更好地、更规范地服务消费者，根据公司的规划，甲方根据乙方的申请和对乙方的经营能力的审核，同
+                    意乙方加入___________公司的销售网络。同意乙方在_______省（市、自治区）_________市（地区）_______县
+                    （区）_______地点（商场建筑物）（代理、经销、专卖、批发、零售）专属性经营（_______）品牌________系列产品。 </p>
+                <p>　　第二条订立本协议的目的在于确保甲、乙双方忠实地履行本协议规定的双方的职责和权利。乙方作为单独的企业法人或经营者进行经济活动。因此，他必须遵守对所
+                    有企业法人或经营者共同的法律要求，特别是有关资格的规则以及社会的、财务的商业要求。作为一个企业法人或经营者，乙方应就其活动自负一切风险和从合法经
+                    营中获利。乙方不是甲方的代理人，也不是甲方的雇员和合伙人。乙方不是作为甲方委托代表，乙方无权以甲方的名义签定协议，使甲方在任何方面对第三人承担责
+                    任，或由甲方负担费用，承担任何义务。订立本协议并未授予乙方任何约束甲方或甲方有关企业之权利，甲方对本协议任何条款有最终的解释权。 </p>
+                <p>　　第三条有效期从_______年_____月_____日至_______年_____月_____日，由签约日计。除非本协议提前终止，乙方可在协议有
+                    效期满前三个月向甲方提出延长协议合作的书面请求，经甲方同意，可以续签《__________合作协议书》。 </p>
+                <p>　　第四条甲方为使乙方所辖区域更好运营，开发和提供适销产品，保证产品质量符合标准，合理定价，最大限度保证乙方的供应。在本协议期间，甲方承诺，积极协助
+                    承担市场物流、组织功能乙方按甲方规划进行市场设计和拓展市场网络。甲方承诺在乙方要求下，可为乙方代办货物托运及相应事项，用乙方要求的方式运输到乙方
+                    所指定的地点，其运输、保险等费用均由受益人乙方支付。甲方为乙方提供适当的培训和辅导。作为市场开发和业务拓展必备条件，以保证整个系统持续统一。甲方
+                    负责组织品牌宣传，并协同承担市场物流、组织功能的乙方开展区域性的促销活动，最大限度地支持乙方的经营。甲方在作出的广告及推广活动之前，须先将有关活
+                    动资料通知乙方，以使乙方能于活动前作出适当准备及加以响应。甲方的品牌和产品及相关的灯箱广告、POP广告、店铺内外之装潢设计及陈设，由甲方定出 VIS形象设计，并为乙方提供相应辅导。 </p>
+                <p>　　第五条乙方保护甲方的商标等知识产权，规范地使用甲方商标标识。乙方有义务协助甲方打假、市场监管。举报、举证假冒伪劣产品、窜货以及其它不正当竞争行
+                    为。协同甲方与当地相关的执法部门进行协调、沟通。乙方只能在甲方授权的区域内开展业务，不得在其它区域销售商品，如未有其它分销商经营的区域，乙方如愿 发展业务，必须向甲方申请。 </p>
+                <p>　　乙方只能在甲方所指定的进货渠道进货，不得到其它地方进货。通过市场的细分、有序的管理、合
+                    理地分配，有效支持网点商品供应，不得经营其它品牌产品和销售假冒产品。协议有效期内，乙方所属区域内网点的零售价格，在甲方建议价格范围内保持统一，不
+                    得随意大幅度调价。乙方有义务为甲方收集所需要的市场信息，或根据甲方的要求进行市场调查，并在规定期限内汇总上报甲方。妥善保存乙方的经营业务记录，以 备甲方的核查。 </p>
+                <p>　　第六条乙方有使用甲方授权范围内的商标、商标标识、VIS形象设计及甲方提供的适当范围的经营技术和商业秘密的权利。乙方具有从甲方指定进货渠道
+                    进货并在协议规定的范围内进行销售的权利。具有因甲方提供的产品本身质量问题可无条件退换的权利，但属乙方经营问题则由乙方自理。获得甲方所提供的培训和
+                    指导的权利。独立处理协议约定以外事项的权利。在协议约定的范围内行使甲方所赋予的权利。承担市场物流、组织功能的乙方有权推荐、考核所辖范围内分销商或
+                    零售商。但推荐的分销商、零售商必须向甲方申请，签定协议、由甲方颁发证书后方可运营。 </p>
+                <table>
+                    <tbody>
+                    <tr class="firstRow">
+                        <td width="823" valign="top" style="word-break: break-all;">
+                            <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; text-align: justify; white-space: normal; background-color: rgb(255, 255, 255); word-wrap: break-word !important;">
+                                <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important;">第一，永葆对党忠诚、为国奉献的赤子心。</strong>坚定理想信念，对党、国家、人民绝对忠诚，是外交人员的根和魂。要牢固树立“四个意识”，坚定“四个自信”，自觉在思想上政治上行动上同党中央保持高度一致，坚决维护党中央权威和集中统一领导，坚决贯彻执行党中央外交方针政策，坚决维护国家利益和民族尊严，坚持外交为民，全心全意为人民服务。
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="823" valign="top" style="word-break: break-all;">
+                            <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: normal; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; text-align: justify; background-color: rgb(255, 255, 255); word-wrap: break-word !important;">
+                                <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important;">第二，永葆开拓奋进、担当有为的事业心。</strong>中国共产党既为中国人民谋幸福，也把为全人类作贡献作为重要使命。要统筹国内国际两个大局,树立更宽广的世界眼光、更宏大的战略抱负，胸怀祖国，兼济天下，推动构建新型国际关系，推动构建人类命运共同体。要深化全方位外交布局,拓展全球伙伴关系网，不断扩大我国的“朋友圈”。要推动共建“一带一路”，深化同各国的广泛合作,促进共同发展。要积极参与全球治理和多边事务,维护中国人民利益和全人类共同利益。要讲好中国共产党的故事，讲好中国的故事，讲好中国人民的故事，促进中外理解和友谊。
+                            </p>
+                            <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: normal; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; text-align: justify; background-color: rgb(255, 255, 255); word-wrap: break-word !important;">
+                                &nbsp;
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="823" valign="top" style="word-break: break-all;">
+                            <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: normal; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; text-align: justify; background-color: rgb(255, 255, 255); word-wrap: break-word !important;">
+                                <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important;">第三，永葆主动学习、自我革新的进取心。</strong>我国外交工作内涵和外延不断扩展，形势和任务不断变化，对外交队伍建设提出了更高要求。外交人员既要政治过硬，又要本领高强。要坚持不懈加强学习，认真学习党的理论和路线方针政策、国家法律法规，学习各方面知识，不断提高科学化、专业化水平。要加强能力建设，为做好对外工作提供有力支撑。
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="823" valign="top" style="word-break: break-all;">
+                            <strong style="color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; text-align: justify; white-space: normal; margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important;">第四，永葆党要管党、从严治党的责任心。</strong><span style="color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; text-align: justify; background-color: rgb(255, 255, 255);">外交大权在党中央，党中央对外交工作实行集中统一领导。要落实好管党治党主体责任，坚持全面从严治党，抓好党的领导和党的建设，抓好思想政治工作。要严格遵守党的政治纪律和政治规矩，严格落实中央八项规定精神。要努力打造一支政治强、业务精、作风好、纪律严的外交队伍。</span>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td width="823" valign="top" style="word-break: break-all;">
+                            <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255); text-align: justify; word-wrap: break-word !important;">
+                                <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important;">习近平强调，中国特色社会主义进入了新时代。做好新时代外交工作，首先要深刻领会党的十九大精神，正确认识当今时代潮流和国际大势。</strong>放眼世界，我们面对的是百年未有之大变局。新世纪以来一大批新兴市场国家和发展中国家快速发展，世界多极化加速发展，国际格局日趋均衡，国际潮流大势不可逆转。中国共产党团结带领中国人民顽强奋斗、发愤图强，中华民族迎来了从站起来、富起来到强起来的伟大飞跃，中华民族伟大复兴展现出前所未有的光明前景。只要我们咬定青山不放松，沿着中国特色社会主义道路奋勇前进，我们的国家必将日益繁荣昌盛，必将日益走近世界舞台中央，必将日益为人类作出新的更大贡献。在中国共产党坚强领导下，我国各族人民坚定信心、坚定信念，坚定不移走中国特色社会主义道路，坚定不移改革开放，不走老路，不走邪路，勇开新路，使中国特色社会主义取得了举世瞩目的发展成就，展现出日益光明的发展前景。
+                            </p>
+                            <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255); word-wrap: break-word !important;">
+                                &nbsp;
+                            </p>
+                            <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255); text-align: justify; word-wrap: break-word !important;">
+                                <strong style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; word-wrap: break-word !important;">习近平指出，当前我国发展既面临前所未有的机遇，也面临前所未有的挑战。</strong>外交战线全体同志要认真学习贯彻党的十九大精神、新时代中国特色社会主义思想，不忘初心，牢记使命，锐意进取，开拓创新，深入推进中国特色大国外交，继续为党和国家事业发展贡献力量。
+                            </p>
+                            <p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; color: rgb(62, 62, 62); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255); word-wrap: break-word !important;">
+                                &nbsp;
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="823" valign="top" style="word-break: break-all;"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>　　第七条在乙方违背本协议即违法经营、制假、售假、恶意窜货、侵犯甲方知识产权等严重侵害甲方合法权益等行为时，本协议视作立即终止。甲方有权采取对乙方的 下列措施： </p>
+                <p>
+                    　　1.责令乙方自行承担费用拆除所有的灯箱及一切有关的装饰用具、店面装修、宣传品等。乙方自行承担软件和硬件设备投资的一切损失2.向有关执法机关提出执法请求，封存乙方所有的带有甲方商标标识的商品。 </p>
+                <p>　　3.依法提请司法和执法机关追索乙方的赔偿责任和法律责任。与此同时乙方必须</p>
+                <p>　　（1）结清与甲方（甲方指定的供货商）的财务往来关系。 </p>
+                <p>　　（2）不得再进行销售甲方的商品。 </p>
+                <p>　　（3）必须承担客户后续服务成本，包括退货、维修、索赔等。 </p>
+                <p>　　第八条甲方的商标，属甲方所有的知识产权，受国家法律保护。所有相关产品的标识，均属甲方所有。未经甲方事先书面专项授权，乙方不得使用甲方的名称、商
+                    标、公司司标等涉及公司知识产权内容、标识进行工商注册、招 商、广告等；不得使用甲方提供的标识用于本协议以外的任何交易。乙方承诺不得擅自印刷有关商标、标识及促销广告发布；不得超越本协议所规定的权利
+                    范围，擅自制作总经销、总代理、代表处的证书、文件、名片、搁牌、铜牌等进行营业和运作；不得擅自改变统一的形象进行招牌、灯箱和有关标识物的制作和装
+                    潢。若乙方违反规定，甲方有权单方面终止协议，乙方除应按规定承担违约责任外，还应赔偿甲方遭受的一切损失。 </p>
+                <p>　　第九条如双方因不可抗力，或非双方所能控制或所能预见事件的发生，包括自然灾害、战争、政府行为、社会骚乱等情况而不能履行其业务，本协议的履行可以终
+                    止。如果发生不可抗力事件，援引不可抗力的当事人必须在15天内或通讯障碍消除之日起_______天内以书面的方式，必要时以传真或电传的方式，立即通
+                    知另一方当事人该事件的发生。如果他在上述期限内未能这样做，他将不能继续从本条协议中获益。 </p>
+                <p>　　本协议受中华人民共和国法律的管辖。 </p>
+                <p>　　第十条如果产生有关本协议的存在、效力、履行、解释、终止的争议，双方应通过友好协商解决， 如果争议发生之日起三个月内通过协商不能解决的，或者任何一方拒绝协商的，则任何一方均可诉请本协议签定地人<a
+                        title="民法" href="http://www.chinalawedu.com/web/23243/" target="_blank" class="bule">民法</a>院裁决。
+                </p>
+                <p>　　第十一条协议签署地为南京市。本协议一式两份，甲乙双方签字之日起生效。双方各备案一份，复印件无效。乙方兹承认签署本协议，并已阅读及明白本协议所列条 款所包含的规定，并同意受其约束。 </p>
+                <p>　　如果某个条文认为是不适用或无效的，可以在本协议的附加协议中予以更改和修正，该条文不适用或无效不应影响整个协议的效力。同时签署的本协议的附加协议中 的更改和修正，与本协议有同等法律效力。 </p>
+                <p>　　甲方：________________</p>
+                <p>　　公章：________________</p>
+                <p>　　委托人：_______________</p>
+                <p>　　签定日期：_____________</p>
+                <p>　　乙方：_______________</p>
+                <p>　　公章：________________</p>
+                <p>　　委托人：_______________</p>
+                <p>　　签定日期：____________</p>
+                <p>　　甲方： </p>
+                <p>　　乙方； </p>
+                <p>　　甲、乙双方本着精诚合作、平等互利的原则，经友好协商，就相关租赁合作事宜，成如下，双方共 同遵守： </p>
+                <p>　　第一条：合作范围</p>
+                <p>　　甲方向乙方租用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    （详见附件）以作甲方所属项目&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    会务现场布置之用。 </p>
+                <p>　　乙方同时配合甲方上述租用物之现场制作工程。 </p>
+                <p>　　第二条：合作期限</p>
+                <p>　　合作期限自2007年月？日至　　　年&nbsp;&nbsp;　　 月&nbsp;　&nbsp;&nbsp;&nbsp;
+                    日，共　　　天第三条：收费标准、结算方式1、收费标准：以上物品租用连制作等工程服务内容费用总额为人民币？？元（开票加收8％） </p>
+                <p>　　2、结算方式：甲方签订本合同当日以现金预付总价款的30％为定金，进场验收后付30％，余 款于活动结束当天以现金一次性付清予乙方第四条：甲乙双方的权利和义务</p>
+                <p>　　（一）甲方的权利和义务</p>
+                <p>　　1、负责提供活动场地，提供必要的活动协助。 </p>
+                <p>　　2、双方签署合同之日起，甲方将其所属项目现场制作工程部分委托乙方代理。 </p>
+                <p>　　3、负责维护活动的治安秩序及保障乙方工作人员的人身安全，财物保管。 </p>
+                <p>　　4、甲方应按约定如期向乙方支付器材租用费用，愈期3天无故不支付，则按每天5％的标准向乙方支付滞纳金。 </p>
+                <p>　　（二）乙方的权利和义务</p>
+                <p>　　1、乙方管理及工作人员在甲方场所活动期间，应遵守国家的<a title="法律法规" href="http://www.chinalawedu.com/falvfagui/"
+                                                   target="_blank" class="bule">法律法规</a>，自觉遵守甲方的规章制度，配合甲方管理人员的安排。 </p>
+                <p>　　2、乙方必须根据甲方要求按时、按质、按量地完成相关作业。 </p>
+                <p>　　3、甲方有权根据乙方活动内容及质量提出合理建议，乙方需积极与甲方进行协商，并根据协商结果作相应调整。 </p>
+                <p>
+                    　　4、应在协议约定时间内提供合同内容中的租用器材及相关作业，如因天气原因及不可抗力因素阻碍活动进行，经甲方同意后可中止活动，已安排提供服务的活动项目费用需照常支付费用5、本次活动基本设施的验收日期为2007年月？日第五条：违约责任1、乙方未能按合同规定时间如期合同内容中的租用器材及相关作业，则均属违约，应给予甲方经济赔偿，赔偿金额按<a
+                        title="合同法" href="http://www.chinalawedu.com/web/23251/" target="_blank" class="bule">合同法</a>有关规定执行2、若甲方未能够按期付款，则按合同法规定给乙方5％滞纳金3、本协议委托内容确定以及费用总额、委托变更、中止、解除和提前终止需双方书面确认。如任
+                    何一方违约，违约方须赔偿对方第六条：其它1、本协议一式二份，甲乙双方各执一份。均具有同等法律效力2、本协议中未尽事宜，双方协商解决，并另行签定补充协议。 </p>
+                <p>　　3、本协议自签定之日起生效。 </p>
+                <p>　　甲方（盖章）：　　　　　　　　　　乙方（盖章）： </p>
+                <p>　　法定代表人（签名）：　　　　　　　法定代表人（签名）： </p>
+                <p>　　或指定授权人：　　　　　　　　　　或指定授权人： </p>
+                <p>　　帐　户：　　　　　　　　　　　　　　开户行：　　　　　　　　　　　帐？号：　　　　　　　　　　　　　全称： </p>
+                <p>　　本合同于　　　年　　　　月　　　　日签订于</p>
+                <div id="ggban"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/jQuery.print.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+</body>
+</html>

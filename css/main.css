@@ -1,0 +1,42 @@
+.main-container{
+    width: 100%;
+}
+.form-container{
+    width: 100%;
+}
+form {
+    margin: 0 0 0 0px;
+}
+.main-row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.edui-default.edui-editor{
+    border: 0px solid #d4d4d4!important;
+}
+.edui-editor-iframeholder.edui-default{
+    padding-top: 15px;
+    text-align: center;
+    padding-bottom: 5px;
+    overflow: auto!important;
+}
+.edui-editor-iframeholder.edui-default iframe{
+    margin-left: auto;
+    margin-right: auto;
+    width: 21cm!important;
+    min-height: 29.7cm;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1.5cm;
+}
+.edui-default .edui-editor-toolbarboxouter {
+    background-image: -moz-linear-gradient(top, #ffffff, #ffffff)!important;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ffffff))!important;
+    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff)!important;
+    background-image: -o-linear-gradient(top, #ffffff, #ffffff)!important;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff)!important;
+}
