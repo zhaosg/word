@@ -112,7 +112,7 @@
         return reg.test(str);
     }
 
-    var html = "<p>上合组织青岛峰会将于6月9日至10日举行，这是继2012年北京峰会后上合组织再次回到它<span>的诞生12地中国</span>，也是今年中国举行的又一重大主场外交活动。不久前，习近平主席在集体会见上合组织成员国外长时，对上合组织发展作出上述评价。</p>";
+    var html = "<p>上合组织青岛峰会将于6月9日至10日举行，这是继2012年北京峰会后上合组织再次回到它<span style='font-size: 18px'>的诞生12地中国</span>，也是今年中国举行的又一重大主场外交活动。不久前，习近平主席在集体会见上合组织成员国外长时，对上合组织发展作出上述评价。</p>";
     $(function () {
         var $html = $('<div>' + html + '</div>');
         var defaultStyle = "position:absolute;left:-100000px;top:-100000px;font-size:13.333333333333332px;font-family:Lato;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;";
@@ -125,11 +125,11 @@
             for (var i = 0; i < cns.length; i++) {
                 var node = cns[i];
                 text = node.textContent;
-                var style;
+                var style = defaultStyle;
                 if (node.nodeType == 3) {
                     style = defaultStyle;
                 } else {
-                    style = node.getAttribute('style');
+                    extractFontStyle(node);
                 }
                 seg_end = seg_start + text.length - 1;
                 segs.push([seg_start, seg_end]);
@@ -141,6 +141,30 @@
             var lines = computeWordWrap(content, window[styleFunctionName], linewidth);
             renderParagraph(lines);
         });
+
+        function extractFontStyle(node) {
+            var style = window.getComputedStyle(node, null);
+            var attrs = ["font-size", "font-family", "font-weight", "font-style", "font-variant", "text-decoration", "vertical-align", "white-space"];
+            var mystyle = {
+                "position": "absolute",
+                "left": "-100000px",
+                "top": "-100000px",
+                "font-size": "13.333333333333332px",
+                "font-family": "Lato",
+                "color": "#000000",
+                "background-color": "transparent",
+                "font-weight": "400",
+                "font-style": "normal",
+                "font-variant": "normal",
+                "text-decoration": "none",
+                "vertical-align": "baseline"
+            };
+            for (var i = 0; i < attrs.length; i++) {
+                if (style.getPropertyValue(attrs[i]))
+                    mystyle[attrs[i]] = style.getPropertyValue(attrs[i]);
+            }
+            return mystyle;
+        }
 
         function computeWordWrap(text, styleFunc, linewidth) {
             var sum = 0;
